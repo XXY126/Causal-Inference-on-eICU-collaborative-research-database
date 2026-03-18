@@ -207,3 +207,30 @@ marimo/_lsp/
 __marimo__/
 data/*.csv
 data/
+.DS_Store
+**/.DS_Store
+Miniforge3-MacOSX-arm64.sh
+# Installer e file grandi
+*.sh
+*.pkg
+*.dmg
+Miniforge*
+
+# Dataset (troppo grandi)
+data/raw/
+data/processed/
+*.csv
+*.gz
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+**/.DS_Store
+output_png/analisi esplorativa/
+.ipynb_checkpoints/
