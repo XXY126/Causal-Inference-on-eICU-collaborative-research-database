@@ -4,14 +4,14 @@ Original implementation: https://github.com/claudiashi57/dragonnet
 """
 
 import numpy as np
+from tensorflow.keras import Input
+from tensorflow.keras import Model as keras_Model
+from tensorflow.keras.callbacks import EarlyStopping, ReduceLROnPlateau, TerminateOnNaN
+from tensorflow.keras.layers import Dense, Concatenate
+from tensorflow.keras.optimizers import SGD, Adam
+from tensorflow.keras.regularizers import l2
+from tensorflow.keras.layers import Layer
 import tensorflow as tf
-from keras import Input
-from keras import Model as keras_Model
-from keras.callbacks import EarlyStopping, ReduceLROnPlateau, TerminateOnNaN
-from keras.layers import Dense, Concatenate
-from keras.optimizers import SGD, Adam
-from keras.regularizers import l2
-from keras.layers import Layer
 import keras.backend as K
 
 from .utils import (
@@ -25,7 +25,7 @@ from .utils import (
     make_tarreg_loss,
 )
 
-from model import Model
+from ..model import Model
 
 class DragonNet(Model):
     
